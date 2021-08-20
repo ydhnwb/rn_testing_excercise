@@ -1,7 +1,8 @@
-import { boolean } from 'fp-ts';
-import { pass } from 'fp-ts/lib/Writer';
+import { AxiosError } from 'axios';
 import React, { useState } from 'react';
 import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
+import API from '../../../data/common/module/network_module';
+import LoginRequest from '../../../data/login/dto/login_request';
 
 
 const LoginPage : React.FC = () => {
@@ -10,16 +11,23 @@ const LoginPage : React.FC = () => {
 
     const [emailError, setEmailError] = useState("")
     const [passwordError, setPasswordError] = useState("")
+    const [networkError, setNetworkError] = useState("")
 
 
-    const onSubmit = () => {
+    const onSubmit = async () => {
         if(validate()){
-            console.log("Success")
-        }else{
-            console.log("Failed")
+            const requestBody : LoginRequest = { email, password }
+            await API.post("auth/login", requestBody)
+                .then(res => res.data)
+                .catch((e: AxiosError) => {
+                    const errorMsg = e.response?.data['errors'][0]
+                    setNetworkError(errorMsg)
+                    return null
+                })
         }
     }
 
+    //simplified
     const validate = () : boolean => {
         setEmailError("")
         setPasswordError("")
@@ -54,6 +62,9 @@ const LoginPage : React.FC = () => {
             <Text testID="textPasswordError" style={[styles.error, styles.spacer]}>{passwordError}</Text>
 
             <Button testID="buttonLogin" onPress={onSubmit} title="Sign in"/>
+
+            <Text style={[styles.error, styles.spacer]}>{networkError}</Text>
+
         </View>
     )
 }

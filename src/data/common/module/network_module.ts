@@ -1,7 +1,7 @@
-import axios, { AxiosError } from 'axios';
+import axios  from 'axios';
 
 const API = axios.create({
-    baseURL: "https://jsonplaceholder.typicode.com/",
+    baseURL: "https://golang-heroku.herokuapp.com/api/",
     timeout: 1000 * 30,
     transformResponse: [
         (response) => {

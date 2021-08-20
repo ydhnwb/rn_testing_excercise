@@ -106,5 +106,20 @@ exports[`test the login page should render correctly 1`] = `
       </Text>
     </View>
   </View>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "red",
+        },
+        Object {
+          "marginBottom": 4,
+          "marginTop": 2,
+        },
+      ]
+    }
+  >
+    
+  </Text>
 </View>
 `;
