@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test the login page should render correctly 1`] = `
+<View
+  style={
+    Object {
+      "padding": 16,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "fontSize": 18,
+        "fontWeight": "600",
+      }
+    }
+  >
+    Hello login
+  </Text>
+  <TextInput
+    allowFontScaling={true}
+    onChangeText={[Function]}
+    placeholder="Email"
+    rejectResponderTermination={true}
+    underlineColorAndroid="blue"
+  />
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "red",
+        },
+        Object {
+          "marginBottom": 4,
+          "marginTop": 2,
+        },
+      ]
+    }
+    testID="textEmailError"
+  >
+    
+  </Text>
+  <TextInput
+    allowFontScaling={true}
+    onChangeText={[Function]}
+    placeholder="Password"
+    rejectResponderTermination={true}
+    underlineColorAndroid="blue"
+  />
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "red",
+        },
+        Object {
+          "marginBottom": 4,
+          "marginTop": 2,
+        },
+      ]
+    }
+    testID="textPasswordError"
+  >
+    
+  </Text>
+  <View
+    accessibilityRole="button"
+    accessibilityState={Object {}}
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+    testID="buttonLogin"
+  >
+    <View
+      style={
+        Array [
+          Object {},
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#007AFF",
+              "fontSize": 18,
+              "margin": 8,
+              "textAlign": "center",
+            },
+          ]
+        }
+      >
+        Sign in
+      </Text>
+    </View>
+  </View>
+</View>
+`;
