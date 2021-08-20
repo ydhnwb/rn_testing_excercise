@@ -4,7 +4,6 @@ import LoginPage from '../../../src/presentation/screen/login/login_page';
 import { render, fireEvent } from '@testing-library/react-native';
 import axios from 'axios'
 import LoginResponse from '../../../src/data/login/dto/login_response';
-import loginPost from '../../fetchers/login/login_fetch';
 
 // jest.mock('axios')
 // const mockAxios = axios as jest.Mocked<typeof axios>
